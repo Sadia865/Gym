@@ -22,7 +22,7 @@ function App() {
 
   if (!isAuthenticated) {
     return (
-      <Router>
+      <Router basename="/Gym">
         <Routes>
           <Route path="/*" element={<Login onLogin={() => setIsAuthenticated(true)} />} />
         </Routes>
@@ -31,7 +31,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/Gym">
       <AppLayout>
         <Routes>
           <Route path="/" element={<Dashboard />} />
